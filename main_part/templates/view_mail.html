@@ -1,0 +1,835 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.radixtouch.in/templates/admin/Worksbot/source/light/dashboardoard/email/view-mail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 12:28:03 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>WorksSale</title>
+    <!-- Favicon-->
+     <link rel="icon" href="{% static 'dashboard/images/favi.png' %}" type="image/x-icon">
+    <!-- Plugins Core Css -->
+    <link href="{% static 'dashboard/css/app.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/css/form.min.css' %}" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="{% static 'dashboard/css/style.css' %}" rel="stylesheet" />
+    <!-- You can choose a theme from css/styles instead of get all themes -->
+    <link href="{% static 'dashboard/css/styles/all-themes.css' %}" rel="stylesheet" />
+</head>
+
+<body class="light">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img class="loading-img-spin" src="{% static 'dashboard/images/loading.png' %}" alt="admin">
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" onClick="return false;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false"></a>
+                <a href="#" onClick="return false;" class="bars"></a>
+                <a class="navbar-brand" href="/dashboard">
+                    <img src="{% static 'dashboard/images/logo.png' %}" alt="" style="margin-top: -28px;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="#" onClick="return false;" class="sidemenu-collapse">
+                            <i class="nav-hdr-btn ti-align-left"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Full Screen Button -->
+                    <li class="fullscreen">
+                        <a href="javascript:;" class="fullscreen-btn">
+                            <i class="nav-hdr-btn ti-fullscreen"></i>
+                        </a>
+                    </li>
+                    <!-- #END# Full Screen Button -->
+                    <!-- #START# Notifications-->
+                    <li class="dropdown">
+                        <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="nav-hdr-btn ti-bell"></i>
+                            <span class="notify"></span>
+                            <span class="heartbeat"></span>
+                        </a>
+                        <ul class="dropdown-menu pullDown">
+                            <li class="header">NOTIFICATIONS</li>
+                            <li class="body">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user1.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">Sarah Smith</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 14 mins ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user2.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">Airi Satou</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 22 mins ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user3.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">John Doe</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 3 hours ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user4.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">Ashton Cox</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 2 hours ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user5.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">Cara Stevens</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 4 hours ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user6.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">Charde Marshall</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> 3 hours ago
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <span class="table-img msg-user">
+                                                <img src="{% static 'dashboard/images/user/user7.jpg' %}" alt="">
+                                            </span>
+                                            <span class="menu-info">
+                                                <span class="menu-title">John Doe</span>
+                                                <span class="menu-desc">
+                                                    <i class="material-icons">access_time</i> Yesterday
+                                                </span>
+                                                <span class="menu-desc">Please check your email.</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#" onClick="return false;">View All Notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- #END# Notifications-->
+                    <li class="dropdown user_profile">
+                         <div class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{% static 'dashboard/images/user.jpg' %}" alt="user">
+                        </div>
+                        <ul class="dropdown-menu pullDown">
+                            <li class="body">
+                                <ul class="user_dw_menu">
+                                    <li>
+                                        <a href="/profile">
+                                            <i class="material-icons">person</i>Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <i class="material-icons">feedback</i>Feedback
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onClick="return false;">
+                                            <i class="material-icons">help</i>Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                       <a href="/index">
+                                            <i class="material-icons">power_settings_new</i>Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- #END# Tasks -->
+                    <li class="pull-right">
+                        <a href="#" onClick="return false;" class="js-right-sidebar" data-close="true">
+                            <i class="nav-hdr-btn ti-layout-grid2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <div>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                	<li>
+	                <div class="sidebar-profile clearfix">
+	                  <div class="profile-img">
+	                     <img src="{% static 'dashboard/images/usrbig.jpg' %}" alt="profile">
+	                  </div>
+	                  <div class="profile-info">
+	                     <h3>Sarah Deo</h3>
+	                     <p>Welcome Admin !</p>
+	                  </div>
+	               </div>
+	                </li>
+                    <li class="header">-- Main</li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/dashboard">Dashboard</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Staff</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/users">Users</a>
+                            </li>
+                            <li>
+                                <a href="/roles">Roles</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/customers">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/vendors">
+                            <i class="fas fa-industry"></i>
+                            <span>Vendors</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Products</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/product_list">Product List</a>
+                            </li>
+                            <li>
+                                <a href="/brands">brands</a>
+                            </li>
+                            <li>
+                                <a href="/tax">Tax</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/sales">
+                            <i class="fas fa-book"></i>
+                            <span>Sales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/returns">
+                            <i class="fas fa-undo"></i>
+                            <span>Returns</span>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="fas fa-clipboard"></i>
+                            <span>Reports</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/stock_analysis">Stock Analysis</a>
+                            </li>
+                            <li>
+                            <li>
+                                <a href="/purchase_tax_report">Purchase Tax Report</a>
+                            </li>
+                            <li>
+                                <a href="/expense_report">Expense Report</a>
+                            </li>
+                            <li>
+                                <a href="/customer_report">Customer Report</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/quotations">
+                            <i class="far fa-comments"></i>
+                            <span>Quotations</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="fas fa-money-bill"></i>
+                            <span>Expenses</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/expense_list">Expense List</a>
+                            </li>
+                            <li>
+                                    <a href="/expense_category">Expense Category</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/calenders">
+                            <i class="fas fa-calenders-alt"></i>
+                            <span>Calenders</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="/profile">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Profile</span>
+                        </a>
+                        
+                    </li>
+                     <li class="header">-- Apps</li>
+                     <li class="active">
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="menu-icon ti-email"></i>
+                            <span>Email</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/inbox">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="/compose">Compose</a>
+                            </li>
+                            <li class="active">
+                                <a href="/view_mail">Read Email</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/chat">
+                            <i class="menu-icon ti-comment"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                      <li>
+                        <a href="/index">
+<i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                        <div class="leftSideProgress">
+                            <div class="progress-list">
+                                <div class="details">
+                                    <div class="title">Disk Usage</div>
+                                </div>
+                                <div class="status">
+                                    <span>52</span>%
+                                </div>
+                                <div class="progress-s progress">
+                                    <div class="progress-bar progress-bar-success width-per-52" role="progressbar"
+                                        aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leftSideProgress">
+                            <div class="progress-list m-b-10">
+                                <div class="details">
+                                    <div class="title">Server Load</div>
+                                </div>
+                                <div class="status">
+                                    <span>79</span>%
+                                </div>
+                                <div class="progress-s progress">
+                                    <div class="progress-bar progress-bar-warning width-per-79" role="progressbar"
+                                        aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation">
+                    <a href="#skins" data-toggle="tab" class="active">SKINS</a>
+                </li>
+                <li role="presentation">
+                    <a href="#settings" data-toggle="tab">SETTINGS</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane in active in active stretchLeft" id="skins">
+                    <div class="demo-skin">
+                        <div class="rightSetting">
+                            <p>GENERAL SETTINGS</p>
+                            <ul class="setting-list list-unstyled m-t-20">
+                                <li>
+                                    <div class="form-check">
+                                        <div class="form-check m-l-10">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="" checked> Save
+                                                History
+                                                <span class="form-check-sign">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <div class="form-check m-l-10">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="" checked> Show
+                                                Status
+                                                <span class="form-check-sign">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <div class="form-check m-l-10">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="" checked> Auto
+                                                Submit Issue
+                                                <span class="form-check-sign">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <div class="form-check m-l-10">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="" checked> Show
+                                                Status To All
+                                                <span class="form-check-sign">
+                                                    <span class="check"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rightSetting">
+                            <p>SIDEBAR MENU COLORS</p>
+                            <button type="button" class="btn btn-sidebar-light btn-border-radius p-l-20 p-r-20">Light</button>
+                            <button type="button" class="btn btn-sidebar-dark btn-default btn-border-radius p-l-20 p-r-20">Dark</button>
+                        </div>
+                        <div class="rightSetting">
+                            <p>THEME COLORS</p>
+                            <button type="button" class="btn btn-theme-light btn-border-radius p-l-20 p-r-20">Light</button>
+                            <button type="button" class="btn btn-theme-dark btn-default btn-border-radius p-l-20 p-r-20">Dark</button>
+                        </div>
+                        <div class="rightSetting">
+                            <p>SKINS</p>
+                            <ul class="demo-choose-skin choose-theme list-unstyled">
+                                <li data-theme="black" class="actived">
+                                    <div class="black-theme"></div>
+                                </li>
+                                <li data-theme="white">
+                                    <div class="white-theme white-theme-border"></div>
+                                </li>
+                                <li data-theme="purple">
+                                    <div class="purple-theme"></div>
+                                </li>
+                                <li data-theme="blue">
+                                    <div class="blue-theme"></div>
+                                </li>
+                                <li data-theme="cyan">
+                                    <div class="cyan-theme"></div>
+                                </li>
+                                <li data-theme="green">
+                                    <div class="green-theme"></div>
+                                </li>
+                                <li data-theme="orange">
+                                    <div class="orange-theme"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rightSetting">
+                            <p>Disk Space</p>
+                            <div class="sidebar-progress">
+                                <div class="progress m-t-20">
+                                    <div class="progress-bar l-bg-cyan shadow-style width-per-45" role="progressbar"
+                                        aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-description">
+                                    <small>26% remaining</small>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rightSetting m-b-15">
+                            <p>Server Load</p>
+                            <div class="sidebar-progress">
+                                <div class="progress m-t-20">
+                                    <div class="progress-bar l-bg-orange shadow-style width-per-63" role="progressbar"
+                                        aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-description">
+                                    <small>Highly Loaded</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane stretchRight" id="settings">
+                    <div class="demo-settings">
+                        <p>GENERAL SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Report Panel Usage</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span class="lever switch-col-green"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Email Redirect</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="lever switch-col-blue"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>SYSTEM SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Notifications</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span class="lever switch-col-purple"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Auto Updates</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span class="lever switch-col-cyan"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>ACCOUNT SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Offline</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span class="lever switch-col-red"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Location Permission</span>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="lever switch-col-lime"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="breadcrumb breadcrumb-style ">
+                            <li class="breadcrumb-item">
+                                <h4 class="page-title">View Mail</h4>
+                            </li>
+                            <li class="breadcrumb-item bcrumb-1">
+                                <a href="/dashboard">
+                                    <i class="fas fa-home"></i> Home</a>
+                            </li>
+                            <li class="breadcrumb-item bcrumb-2">
+                                <a href="#" onClick="return false;">Email</a>
+                            </li>
+                            <li class="breadcrumb-item active">View Mail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="card">
+                        <div class="body">
+                            <div id="mail-nav">
+                                <button type="button" class="btn btn-success waves-effect m-b-15">COMPOSE</button>
+                                <ul class="" id="mail-folders">
+                                    <li class="active">
+                                        <a href="/inbox" title="Inbox">Inbox
+                                            <span class="pull-right badge bg-orange">6</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" title="Sent">Sent</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" title="Draft">Draft</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" title="Bin">Bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" title="Important">Important</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" title="Starred">Starred</a>
+                                    </li>
+                                </ul>
+                                <h5 class="b-b p-10 text-strong">Labels</h5>
+                                <ul class="" id="mail-labels">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-red">local_offer</i>Family</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-blue">local_offer</i>Work</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-orange">local_offer</i>Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-cyan">local_offer</i>Themeforest</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-blue-grey">local_offer</i>Google</a>
+                                    </li>
+                                </ul>
+                                <h5 class="b-b p-10 text-strong">Online</h5>
+                                <ul class="online-user" id="online-offline">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-green" title="Online">brightness_1</i>Sachin</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-indigo" title="Off Line">brightness_1</i>John
+                                            Smith
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-orange" title="Away">brightness_1</i>Askay</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-indigo" title="Off Line">brightness_1</i>Dhavan</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="material-icons col-indigo" title="Off Line">brightness_1</i>Lee</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div class="card">
+                        <div class="boxs mail_listing">
+                            <div class="inbox-body no-pad">
+                                <section class="mail-list">
+                                    <div class="mail-sender">
+                                        <div class="mail-heading">
+                                            <h4 class="vew-mail-header">
+                                                <b>Feedback from CIT</b>
+                                            </h4>
+                                        </div>
+                                        <hr>
+                                        <div class="media">
+                                            <a href="#" class="table-img m-r-15">
+                                                <img alt="" src="{% static 'dashboard/images/user/user2.jpg' %}">
+                                            </a>
+                                            <div class="media-body">
+                                                <span class="date pull-right">4:15AM 01 Jan 2022</span>
+                                                <h4 class="text-primary">Sarah Smith</h4>
+                                                <small class="text-muted">From: sarah@workssale.com</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_mail">
+                                        <p>Dear WORKSSALE Team,</p>
+                                        <p>
+                                            We highly appreciate your efforts for providing the valuable suggestions from time to time with regar to the improvement of our Mobile products.The same had been 
+                                            considered by the concerned department.Some of your suggestions have been implemented successfully and we are glad to say that they have proven to be very beneficial as per the 
+                                            feedback received from our XYZ's Customer Service department and Product Development department.
+                                           <p>
+                                                While it is essntial that an employee dedicates his time mostly for copletion of his assigned tasks.It is also of paramount help when the employee brings his personal thoughts on the lacuna of the 
+                                                products or any other processes that'he notices.We Thank You for being prompt these suggestions to our notice.
+                                            </p>
+                                            <p>
+                                                We are happy to award an additional incentive amount of our project for last month in appreciation of your extra efforts in bringing in valuable ideas and giving feedback to us.
+                                            </p>
+                                        </p>
+                                    </div>
+                                    <div class="attachment-mail">
+                                        <p>
+                                            <span>
+                                                <i class="fa fa-paperclip"></i> 3 attachments — </span>
+                                            <a href="#">Download all attachments</a> |
+                                            <a href="#">View all images</a>
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <a href="#">
+                                                    <img class="img-thumbnail img-responsive" alt="attachment" src="{% static 'dashboard/images/user/file.jpeg' %}">
+                                                </a>
+                                                <a class="name" href="#"> IMG_001.jpg
+                                                    <span>20KB</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="#">
+                                                    <img class="img-thumbnail img-responsive" alt="attachment" src="{% static 'dashboard/images/user/file.jpeg' %}">
+                                                </a>
+                                                <a class="name" href="#"> IMG_002.jpg
+                                                    <span>22KB</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="#">
+                                                    <img class="img-thumbnail img-responsive" alt="attachment" src="{% static 'dashboard/images/user/file.jpeg' %}">
+                                                </a>
+                                                <a class="name" href="#"> IMG_003.jpg
+                                                    <span>28KB</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replyBox m-t-20">
+                                        <p class="p-b-20">click here to
+                                            <a href="#">Reply</a> or
+                                            <a href="#">Forward</a>
+                                        </p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Plugins Js -->
+    <script src="{% static 'dashboard/js/app.min.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'dashboard/js/admin.js' %}"></script>
+    <!-- Demo Js -->
+</body>
+
+
+<!-- Mirrored from www.radixtouch.in/templates/admin/Worksbot/source/light/dashboardoard/email/view-mail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 12:28:19 GMT -->
+</html>
